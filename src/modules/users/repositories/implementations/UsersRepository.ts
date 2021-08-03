@@ -47,6 +47,7 @@ class UsersRepository implements IUsersRepository {
     const userAdamin = this.users.find((user) => user === receivedUser);
 
     userAdamin.admin = true;
+    userAdamin.updated_at = new Date();
 
     return userAdamin;
   }
